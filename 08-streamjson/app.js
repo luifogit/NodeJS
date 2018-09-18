@@ -7,10 +7,10 @@ http.createServer(function(req, res){
     //asking for a url
 
     if(req.url === '/'){
-        fs.createReadStream(__dirname + '/index.html', 'utf8').pipe(res);
+        fs.createReadStream(__dirname + '/index.html').pipe(res);
     }
 
-    if(req.url === '/api'){
+    else if(req.url === '/api'){
         res.writeHead(200, {'Content-Type' : 'application/json'});
         var obj = {
             firstname: 'John',
@@ -18,4 +18,9 @@ http.createServer(function(req, res){
         };
         res.end(JSON.stringify(obj));
     }
-}).listen(3000, '127.0.0.1');
+    else{
+        res.writeHead(404);
+        res.end();
+    }
+    
+}).listen(8080, '127.0.0.1');
