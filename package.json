@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-test-app",
+  "version": "1.0.0",
+  "description": "NODEJS testing app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luifogit/NodeJS.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Luis Felipe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luifogit/NodeJS/issues"
+  },
+  "homepage": "https://github.com/luifogit/NodeJS#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "jasmine-node": "^1.16.2",
+    "moment": "^2.22.2"
+  },
+  "devDependencies": {}
+}
